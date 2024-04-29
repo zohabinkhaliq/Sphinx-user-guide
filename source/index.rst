@@ -10,7 +10,7 @@ Sphinx-User Guide
 .. toctree::
    :maxdepth: 1
 
-   Introduction </scope.rst>
+   Introduction </introduction.rst>
    Installing python and Sphinx </introduction.rst>
    Creating first project </pre_requisites.rst>
     Installing themes </requirements.rst>
