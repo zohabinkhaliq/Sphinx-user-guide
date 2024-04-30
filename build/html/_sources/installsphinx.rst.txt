@@ -11,7 +11,7 @@ Sphinx-User Guide
    :maxdepth: 1
 
    Introduction </introduction.rst>
-   Installing python and Sphinx </install.rst>
-   Creating first project </buildproject.rst>
+   Installing python and Sphinx </introduction.rst>
+   Creating first project </pre_requisites.rst>
     Installing themes </requirements.rst>
    
