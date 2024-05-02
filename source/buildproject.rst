@@ -15,6 +15,16 @@ Step 1: Answer “>Separate source and build direction (y/n)[n]:” according to
 
 Step 2: Fill the attributes as shown in the following table: 
 
++-------------------+--------------------------------------------+
+| **Element**       | Details                                    |
++===================+============================================+
+| Project name      | Enter name of the project in small letters |
++-------------------+--------------------------------------------+
+| Author name(s)    | Enter the author name.                     |
++-------------------+--------------------------------------------+
+| Project release[] | Enter the version of release.              |
++-------------------+--------------------------------------------+
+
 Step 3: For “Project language” press enter for english or enter any other language of your preference. 
 
 Step 4: Project is successfully built and project creation message appears on the terminal. 
