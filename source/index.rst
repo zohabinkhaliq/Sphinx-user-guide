@@ -14,4 +14,4 @@ Sphinx-User Guide
    Installing python and Sphinx </install.rst>
    Creating first project </buildproject.rst>
    Installing themes </installingthemes.rst>
-   
+   Troubleshooting </troubleshooting.rst>

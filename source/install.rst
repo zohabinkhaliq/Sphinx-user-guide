@@ -5,9 +5,9 @@ To get started with sphinx you need to install python and sphinx
 
 To install Sphinx 
 
-1. Go to :ref:`python homepage <https://www.python.org/>`
+1. Go to  `Python Homepage <https://www.python.org/>`_
 2. On the page that appears, select Downloads > All releases. 
-3. In the page that opens, locate release version --  and select
+3. In the page that opens, locate release version --  and select **Download**
 
 .. note::
    We are currently using version -- which is not the latest version
