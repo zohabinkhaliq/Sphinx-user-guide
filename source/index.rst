@@ -8,7 +8,7 @@ Sphinx-User Guide
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
 
    Introduction </introduction.rst>
    Installing python and Sphinx </install.rst>

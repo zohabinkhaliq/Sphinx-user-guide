@@ -1,20 +1,23 @@
-Sphinx Commands 
+Sphinx commands 
 ===============
 
 In this section few helpful sphinx commands are listed. 
 
 
-Heading 1
-========
+Headings (Different levels)
++++++++++++++++++++++++++++
+
+``Heading 1
+========``
 
 Heading 2
 ++++++++
 
 Heading 3
---------------
+---------
 
 Heading 4
-************
+*********
 
 Heading 5
 ^^^^^^^^^
@@ -24,6 +27,11 @@ Heading 6
 
 Heading 7
 ~~~~~~~~
+
+.. note::
+   The number of symbols below the headings should be equal to the length of the line. 
+.. end-note::
+
 
 **I am bold** and *I am italics*
 
@@ -89,5 +97,6 @@ True   False  True
 False  True   True
 True   True   True
 =====  =====  ======
+
 
 
