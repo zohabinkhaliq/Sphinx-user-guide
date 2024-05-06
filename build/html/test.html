@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Testing &#8212; userguide 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Troubleshooting" href="troubleshooting.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="testing">
+<h1>Testing<a class="headerlink" href="#testing" title="Link to this heading">¶</a></h1>
+<p>Internet Facing ApplicationsIFA</p>
+<p>The Internet Facing application can be accessed by users or clients on
+the Internet. For example, the IFA can be a web application an
+enterprise can host in their VPC/VNET and allow access to the users on
+the Internet which could comprise of their customers, partners or
+employees.</p>
+<p>To navigate to this section, select the internet-facing applications
+icon
+<a class="reference internal" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image1.png"><img alt="https://lh7-us.googleusercontent.com/syFrus3YO7kSToMYupHc7njrFqW-mB17l0JgPUyo5fIIFFZfmya8MwV-VbYsNYbQu946zpTIPw1moBhmch6VMHMcDUZVk111pAb2iG2qJCYuzKbI16VF-hQbK2uxIV__moJ3BhIdbxtF1lHzQgKhVJs" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image1.png" style="width: 0.20833in; height: 0.23958in;" /></a>
+from the navigation sidebar to the left.</p>
+<p>FAQs</p>
+<p>What does the architecture for the Internet-facing applications look
+like?</p>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image2.png"><img alt="https://lh7-us.googleusercontent.com/qSxxhe7obNOvJp2dnXLqAlVbE1JknbQkGDqWRzRG-BAO7BQBAl4_QCixMYvgKMAH9dc5cbQEP8RErxfyzg0lLu8RhEDlF512Yb8rUbSa4d6Dn4oCli_1GcWX7RiwaZ71Tc726yNjVvdn3VfAHZMns1M" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image2.png" style="width: 6.5in; height: 3.48958in;" /></a>
+<ul class="simple">
+<li><p>Internet-facing applications (IFA) are applications hosted in Alkira
+CXP serving users accessing and initiating the connections from the
+Internet</p></li>
+<li><p>As a general rule Alkira CXP does not allow internet traffic in the
+ingress direction. IFA is an exception that allows applications to be
+served from the CXP</p></li>
+<li><p>The value proposition of such applications for enterprises is that
+their workloads or applications like web servers that they want to
+host in the CXP and have them face the internet can be provisioned
+using a connector with minimal configuration effort and added
+features like firewall for security purposes.</p></li>
+</ul>
+<p>Which connectors can be used to provision internet-facing applications?</p>
+<p>You can provision internet-facing applications using both on-prem or
+cloud connectors.</p>
+<p>What are the benefits of using the Internet-facing applications feature?</p>
+<p>There are multiple benefits of using Alkira internet-facing applications
+as described below:</p>
+<ul class="simple">
+<li><p>When the Internet Facing applications are deployed, Alkira provides
+an FQDN for the application.</p></li>
+<li><p>Alkira manages the assignment of the Public IP Address to the FQDN.
+Enterprises only have to provide the Private IP Address.</p></li>
+<li><p>Alkira provides the NAT capability for incoming traffic from the
+Public IP to Private IP of the IFA</p></li>
+<li><p> For a Cloud DMZ like environment, the network admin can also
+configure a policy for Firewall inspection of the application traffic
+to provide additional security measures.</p></li>
+</ul>
+<p>How can the Internet-facing application be accessed?</p>
+<p>Enterprises can have an Enterprise DNS server which is used by their
+clients. On this Enterprise DNS server the Enterprise cancould create
+CName and map their FQDN to the Alkira provided FQDN.</p>
+<p>For example, say the app has an Aalkira provided FQDN as
+‘<a class="reference external" href="http://app1.mycompany.apps.alkira.com">app1.mycompany.apps.alkira.com</a>’.
+This can be mapped to
+‘<a class="reference external" href="http://app1.mycompany.com">app1.mycompany.com</a>’ and used by the
+Enterprise users.</p>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image3.png"><img alt="https://lh7-us.googleusercontent.com/Yb2sz9MF5A3IGf7ZX_mg3M7SdcEVGgjtyQmCVKpQgegpvu7n_2ncgTrg1ViysJp0maicnj3ttriDzPLI12hafuL6HUux25qV9L6LDri2t2BQh3QWApKHPBlSntFT-e-oFVLazwOzSP9vzM3RwTMN_xM" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image3.png" style="width: 6.5in; height: 2.92708in;" /></a>
+<p>How to visualize the provisioned applications?</p>
+<p>The green bars on the dashboard indicate the provisioned applications.
+Hover on these bars to view the application details.</p>
+<p>How are the Internet facing applications categorized?</p>
+<p>These applications are divided into the following three sizes based upon
+the number of concurrent sessions they can accommodate:</p>
+<ul class="simple">
+<li><p>Small 1000 sessions</p></li>
+<li><p>Medium 5000 sessions</p></li>
+<li><p>Large 10000 sessions</p></li>
+</ul>
+<p>Configure Internet Facing Applications</p>
+<p>Follow the steps below to configure an internet-facing application:</p>
+<ol class="arabic simple">
+<li><p>Navigate to
+<a class="reference internal" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image4.png"><img alt="https://lh7-us.googleusercontent.com/p5ZewrgD6wi-g05mVqSK88rCDZTshfSgdpMNIhCwaCbyUpgMUqitxdY6DWEpCpdJalzY3IKP6_Nkc9E84hJH_MYn5iR3xenTHMVlUAQigzh2bKt--oKGu7CbzXbKpktvosMW4UmRotOQ9wqwqHA1ojs" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image4.png" style="width: 0.52083in; height: 0.4375in;" /></a>
+<strong>Applications</strong> in the side menu. Then, click  the
+<a class="reference internal" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image5.png"><img alt="https://lh7-us.googleusercontent.com/cz3R5hzI00URdMKJtgKXe5TxnksrOs0dLf51NvKWEHvvV-4uoNkUzeqwPmtEDQbbwrjE-RDvO8E0AF9qkukZ9y2uZVPtVWfMLdnilS0wkNKz01PCYeBJa2GxwVP3OM6lhrJw2ziUupKLFBTnoHDRoH8" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image5.png" style="width: 0.27083in; height: 0.26042in;" /></a>
+button located at the top right corner of the UI. The following view
+will appear on the screen.</p></li>
+</ol>
+<ol class="arabic simple">
+<li><p>Specify the following information  to add a new application.</p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><dl class="simple">
+<dt><strong>Application Name:</strong> The name of the application. Names can <strong>only</strong></dt><dd><p>be alphanumeric characters.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Description-</strong> This is a text field where a description of the</dt><dd><p>Internet facing Application can be entered. This is an optional
+field.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Application accessed via Akamai Prolexic connector –</strong> Set the</dt><dd><p>toggle button to <strong>Yes</strong> to enable the Akamai Prolexic support.
+Refer to <a class="reference external" href="https://docs.google.com/document/d/1oiXUhVFua_zO3KmJNKNUUN53FlPJspWwKN89Ip8b2nU/edit?pli=1#heading=h.wtkv1s2ltivc">Akamai Prolexic Support in
+IFA</a>
+section for more updates.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>FQDN Prefix</strong>: The FQDN prefix for the application that will be</dt><dd><p>used to assign an Alkira DNS to the application. This is a
+required field.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>IP address type for FQDN:</strong> Set the toggle to <strong>IPv4</strong>, <strong>IPv6</strong>,</dt><dd><p>or <strong>Both</strong> as per your requirement. It is used for mapping FQDN.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image6.png"><img alt="https://lh7-us.googleusercontent.com/W2T7QC7HEbAJ7kewp6C0rbBLSHwameZOY4Kv6vBCygROxVhIeD9XPsuY3Pl8HaxmzLGDvJ4hyw0EItHorH87DqQ6QXjZz95eKyMwkGN3vYsVIwez16RUG-zSrbq4a4BHMGVUailokWeua260oHoZyjQ" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image6.png" style="width: 6.5in; height: 3.32292in;" /></a>
+<p><strong>Note</strong>: In case of <strong>IPv6</strong> or <strong>both</strong>, navigate to the Management →
+Segments to configure the IPv6 to IPv4 NAT pool. For more details refer
+to <a class="reference external" href="https://docs.google.com/document/d/1oiXUhVFua_zO3KmJNKNUUN53FlPJspWwKN89Ip8b2nU/edit?pli=1#heading=h.ryhs6nmylhlo">Manage
+Segments</a>
+section.</p>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image7.png"><img alt="https://lh7-us.googleusercontent.com/pj7RphjmBvkJoQbQIM17RnxCdFifSiX3hLjN9sfKN5Pjq3U4-NZeaAg5VZXLDptIS97-qYLf-tVm721lVdmwJZKWVQCPwKIYsvbMo82dqj4zrBG0SE3kXDQftSCFDnOiNTlBMb4apL1c_b_m7EQTbdQ" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image7.png" style="width: 6.5in; height: 2.23958in;" /></a>
+<ol class="loweralpha" start="6">
+<li><div class="line-block">
+<div class="line"><strong>Source NAT IPv4 traffic:</strong> Mark the checkbox to enable IPv4 NAT
+  on source traffic. Once enabled, two additional fields pop up
+  where you define an address range to configure IPv4 to IPv4 NAT
+  Pool for IFA. The NAT pool size is 128 addresses.
+| <a class="reference internal" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image8.png"><img alt="https://lh7-us.googleusercontent.com/ccofdchyBB9nwrN0Uv7i0c3AEpLXLrL5DHFyLc8f-TPPXZCVMxf6uV14pmO9tnlreUuQqISSL2k9HB8aIxwSGD7K-y4Dx13Pl2LVOSXqBYVYbtQ4rEGweMkgyYzzHC3oS7sFnCFnFho_I1l_cybGrQM" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image8.png" style="width: 6.5in; height: 3.25in;" /></a></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><p><strong>Note:</strong> Ensure that the NAT pool doesn’t overlap with network
+addresses used on-premise or in the cloud for the associated segment.</p>
+</div></blockquote>
+<p>When hosting an IFA in a data center or cloud environment, where the
+customer’s network directs traffic towards the internet by default,
+enabling Source NAT for IPv4 Traffic is crucial. This prevents potential
+traffic loss, as traffic might inadvertently take the default route and
+not return to the CXP. By checking the Source NAT IPv4 Traffic box in
+the configuration settings and providing IPv4 Start and End Addresses,
+you can map your public IP address to the NATed IP address. For the
+outbound traffic Alkira will route the traffic based on the destination
+IP address without performing source port mapping. Alkira maintains a
+mapping of the source IP address for each AZ to route the reverse
+traffic flow correctly. This approach ensures proper traffic routing and
+prevents loss of traffic.</p>
+<ol class="loweralpha simple" start="7">
+<li><dl class="simple">
+<dt><strong>Enable Bi-directional IFA Traffic:</strong> You can enable bi-directional</dt><dd><p>traffic for IFA configured. With this option enabled, the server
+can source the traffic to a public destination. Note that there is
+only a single Availability Zone when choosing this option so that
+the same IFA IP address can be used for the flow initiated by the
+application. Any internet traffic from the server will be sent out
+to the internet using IFA IP instead of Internet Connector in that
+segment. Note that Source NAT cannot be configured with
+Bi-Directional IFA Traffic and AWS LoadBalancer cannot be
+application destination.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image9.png"><img alt="https://lh7-us.googleusercontent.com/RgAF9-lAx4b1BOhmjZrzBWC8z-AgXoWwRGMfNBYDjm1vzubnSaRjHoAapkaBNj-KSdDvqyJ0tqzzxxz7BinBV5ghxfwhdoHXB38Fu3iajf3VGTHNYH-l8uwfP3TRT4gKUzPGYSN1ow47iTwfV_3BnGE" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image9.png" style="width: 6.5in; height: 3.53125in;" /></a>
+<p>To ensure that traffic can be initiated from either the user or
+application side and always received at the known source IP address,
+enable Bi-directional IFA Traffic. By checking this box, Alkira removes
+the redundancy of the Availability Zones so that traffic always maps to
+the same AZ, whether it’s Alkira’s or the customer’s EIP. With only one
+AZ, there is only one IP address, simplifying routing as Alkira doesn’t
+need to perform any port changes. Incoming traffic is directed to the
+application via DNAT, and return traffic goes back to the CXP, with the
+source IP becoming the destination IP for steering back to the same AZ.</p>
+<p>When traffic is initiated from the Application’s perspective, the flow
+is slightly different. To ensure that return traffic comes back to the
+CXP, any traffic originating from the application VPC will go through
+the CXP (not the internet connector) if the Enable Bi-directional IFA
+Traffic box is checked. Alkira performs NATing on the source IP to its
+EIP before sending traffic out to the internet. This allows Alkira to
+identify and route the traffic back to its own CXP and perform DNAT to
+the application IP for the reverse traffic flow.</p>
+<ol class="loweralpha simple" start="8">
+<li><dl class="simple">
+<dt><strong>Use BYOIP Address for FQDN:</strong> Select <strong>Yes</strong> to enable this</dt><dd><p>functionality. In the additionaladditonal pop up fields, select
+your BYOIP Prefix from the dropdown and specify your public IP
+addresses accordingly.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="lowerroman simple">
+<li><dl class="simple">
+<dt><strong>Source NAT IPv4 traffic:</strong> Mark the checkbox to enable IPv4 NAT on</dt><dd><p>source traffic. Once enabled, two additional fields pop up where
+you define an address range to configure IPv4 to IPv4 NAT Pool for
+IFA. The NAT pool size is 128 addresses.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="loweralpha simple">
+<li><dl class="simple">
+<dt><strong>Connector Type:</strong> Select the type of connector to be associated</dt><dd><p>with the application from the dropdown. Alkira currentlycurrenlty
+supports  IPsec, AWS, Azure, GCP and AWS DX. This depends upon the
+location of where the application is hosted. This is a required
+field.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<blockquote>
+<div><p><strong>Note: ** If the connector type is **AWS,</strong> you can choose to enable
+Hosted Internal Load Balancer (ILB) to increase the capacity and
+reliability of your application. Refer to <a class="reference external" href="https://docs.google.com/document/d/1oiXUhVFua_zO3KmJNKNUUN53FlPJspWwKN89Ip8b2nU/edit?pli=1#heading=h.iz1cj7y54gfe">Internal Load Balancer
+(ILB)</a>
+for more details.</p>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><dl class="simple">
+<dt><strong>Select connector</strong>: Based on connector type, select the existing</dt><dd><p>connector.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="loweralpha simple">
+<li><p><strong>Select size:</strong> Specify your connector size from the dropdown menu.</p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><p><strong>Private IP Address:</strong> The IP address of the application.</p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><p><strong>Port:</strong> The port used to access the application. Specify the port
+number(s) between 1-655345  or a port range with comma-separated
+values.</p></li>
+</ol>
+<p>**            k. Use BYOIP Address for FQDN:** Select <strong>Yes</strong> to enable
+this functionality. In the additional pop up fields, select your BYOIP
+Prefix from the dropdown and specify your public IP addresses
+accordingly.</p>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image10.png"><img alt="https://lh7-us.googleusercontent.com/y2LP3B8iZwsbaxkjRPJddCwm6neA9EO4FSB1iQTW-5_ZbSImiZi5YUR6HoyaTr7KN58LlMXYtQMcAqVHAkvkhpGRBayUXfSs8ptWdhr4PCsWW8ywU3Sp4qEcxiwFGUIu2rEI9crX0PoUXh6gO9SyZCM" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image10.png" style="width: 6.5in; height: 1.91667in;" /></a>
+<p><strong>Note: BYOIP</strong> only supports IPv4 addresses. Enabling <strong>BYOIP</strong> will
+disable the <strong>IPv6</strong> option. For more details, refer to
+<a class="reference external" href="https://docs.google.com/document/d/1oiXUhVFua_zO3KmJNKNUUN53FlPJspWwKN89Ip8b2nU/edit?pli=1#heading=h.vbo3q8xrr5p0">BYOIP</a>
+section.</p>
+<ol class="loweralpha simple" start="6">
+<li><dl class="simple">
+<dt><strong>Billing Tag:</strong> The billing tag to be associated with the</dt><dd><p>application usage. You can also create a billing tag by clicking
+on the plus icon
+<a class="reference internal" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image12.png"><img alt="https://lh7-us.googleusercontent.com/2yKkFh6rrm8HiqZ0iwHzAoUERngI-2vr70WcP6P4ILJIZPf00bPfjDVBv6-QKmrukkI6CQRRE8UTmmbh46BboUfJNKbrOOVUSC7MDOB9LFir2xmA7bl1szPIOfWewUj-YJGcxb3xfNqhCZTpuplxj8A" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image12.png" style="width: 0.27083in; height: 0.28125in;" /></a>.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image13.png"><img alt="https://lh7-us.googleusercontent.com/RdiO4sjU2ROIdu4nsIX0ARyfV3Qjd5V8cIcM1oVHjVWuBc0hHda2cEfl7QDgxGE8c7YxgkGjUYA7QvHgfT30o5w1DZFqTXWFIGJjHevKz8s8EEyeaMVsVNVsN2MeK3n2_NEXZRf3yj56UUe1sTT7OqE" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image13.png" style="width: 6.5in; height: 3.25in;" /></a>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image9.png"><img alt="https://lh7-us.googleusercontent.com/RgAF9-lAx4b1BOhmjZrzBWC8z-AgXoWwRGMfNBYDjm1vzubnSaRjHoAapkaBNj-KSdDvqyJ0tqzzxxz7BinBV5ghxfwhdoHXB38Fu3iajf3VGTHNYH-l8uwfP3TRT4gKUzPGYSN1ow47iTwfV_3BnGE" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image9.png" style="width: 6.5in; height: 3.53125in;" /></a>
+<p><strong>Note:</strong> You can enable bi-directional traffic for IFA configured. With
+this option enabled, the server can source the traffic to a public
+destination. Note that there is only a single Availability Zone when
+choosing this option. Any internet traffic from the server will be sent
+out to the internet using IFA IP instead of Internet Connector in that
+segment. Note that Source NAT cannot be configured with Bi-Directional
+IF Traffic and AWS LoadBalancer cannot be application destination.</p>
+<blockquote>
+<div><p> Select <strong>Save Application</strong>. A dialog box will appear on the screen
+indicating the application creation status. The next step is to add a
+policy for this application.</p>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image14.png"><img alt="https://lh7-us.googleusercontent.com/MZ2hzskIpHT8YO1vuszIF9q0HMffsyc4TlrqSDJXcOR7ybULLwPu8VF6eS66kVYcZSIp5xDgn3nn6i3H-FOrKDYy9VTBcHZdYcjuZt1t5wIrFXcItZBonjWpSnPL55KXXRGQQsczkRDonr2xqd113jc" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image14.png" style="width: 6.5in; height: 3.33333in;" /></a>
+</div></blockquote>
+<p>4. By default, the Alkira portal blocks all the traffic to IFA. After
+creating the application, a policy needs to be implemented. Refer to the
+<a class="reference external" href="https://docs.google.com/document/d/1oiXUhVFua_zO3KmJNKNUUN53FlPJspWwKN89Ip8b2nU/edit?pli=1#heading=h.nlmz8ecoefm2">Policies</a>
+section for more details.</p>
+<p>5. The final step for an internet-facing application is to provision it.
+Refer to the
+<a class="reference external" href="https://docs.google.com/document/d/1oiXUhVFua_zO3KmJNKNUUN53FlPJspWwKN89Ip8b2nU/edit?pli=1#heading=h.tzwavyjbsvnb">Provision</a>
+section for more details.</p>
+<p>Once provisioned, it appears as tabular data in the <strong>Internet Facing
+Applications</strong> panel. Click on a specific application to view its
+metadata.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Select Ingress Akamai Connector –</strong> Select a connector from the</dt><dd><p>dropdown menu.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Public IP Address1 –</strong> Specify public IP Address 1 for the IFA</dt><dd><p>application. It must be part of the BYOIP range selected in the
+Akamai Prolexic Connector.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Public IP Address 2 –</strong> Specify public IP Address 2 for the IFA</dt><dd><p>application. It must be part of the BYOIP range selected in the
+Akamai Prolexic Connector. <strong>Ports (1-65535) –</strong> Specify a port
+number for your application.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Select Destination Connector Type –</strong> Specify a connector type for</dt><dd><p>the application server.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Destination Connector</strong>: Select from the range of connectors in the</dt><dd><p>dropdown menu for specified type.</p>
+</dd>
+</dl>
+</li>
+<li><p><strong>Private IP Address –</strong> The IP address for the application server.</p></li>
+<li><dl class="simple">
+<dt><strong>Billing Tag</strong>: The billing tag to be associated with the</dt><dd><p>application usage. You can also create a billing tag by clicking
+on the plus icon
+<a class="reference internal" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image12.png"><img alt="https://lh7-us.googleusercontent.com/2yKkFh6rrm8HiqZ0iwHzAoUERngI-2vr70WcP6P4ILJIZPf00bPfjDVBv6-QKmrukkI6CQRRE8UTmmbh46BboUfJNKbrOOVUSC7MDOB9LFir2xmA7bl1szPIOfWewUj-YJGcxb3xfNqhCZTpuplxj8A" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image12.png" style="width: 0.27083in; height: 0.28125in;" /></a>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>Note:</strong> This option is only visible if the associated connector type
+is <strong>AWS.</strong></p>
+<blockquote>
+<div><p>If the application is hosted in AWS behind an Internal Load Balancer
+(ILB) inside of a VPC already onboarded on Alkira, users can
+configure the ILB as the destination for traffic destined to the IFA.
+Alkira will monitor the status of the servers in the target group
+associated with the ILB and load balance the inbound connections to
+the available servers behind the ILB. Alkira will use the previously
+provided AWS credential and retrieve the list of available ILB’s in
+the VPC the user can select from.</p>
+<p>Set the toggle button to <strong>YES</strong> to configure the Internal Load
+Balancer (ILB). An additional field named <strong>Load Balancer</strong> appears.
+Select the desired load balancer from the list of available ILBs in
+the specific VPC. Then configure the ports the application will
+listen on.</p>
+<p><strong>Note</strong>: Update AWS IAM Policy to fetch the ILB’s. The following
+actions must be allowed in the IAM policy: “Action”:
+“elasticloadbalancing:DescribeLoadBalancers”. This also helps Alkira
+to consolidate all Egress and Ingress traffic through CXP.</p>
+<p>For Azure and GCP connectors, the configuration of ILBs is not
+required since both provide redundancy by default.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image17.png"><img alt="https://lh7-us.googleusercontent.com/cXRiEf15BoIHnOvaJoWM-Mdj91rj23Bvzu3NXq3dGcwwDHPgjfWC8Jh3jEHkJklFc5hWDMKd2_Sd3FPiZAXRewV_gXRdzeV6qZdcCX8faKRvoP1XOLNMAEw6RcmGZPkN8ttqQb6MlxmuKsDboe8HXK0" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image17.png" style="width: 6.5in; height: 3.125in;" /></a>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image18.png"><img alt="https://lh7-us.googleusercontent.com/jNWnxjPBoeIASfPp1jsTW2TTv4F5Ti351dqAf5q4hZcZglNvprKe66Xg7XhHM6V09Ld9fcdkyOp2Yt4WhrpZSiFkd5xk0iIkDKiUSXKuCrRs4MV66Cb9FCF4j4VD4Veo9wi1s2X1O60tUqsw7XxP_SI" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image18.png" style="width: 6.5in; height: 3.08333in;" /></a>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Monitor Internet Facing Applications
+<a href="#id3"><span class="problematic" id="id4">**</span></a>Alkira portal dashboard provides high-level statistics related to
+the internet-facing applications. It displays the following information
+for the IFAs:</p>
+<ul class="simple">
+<li><p>Top applications based upon their usage</p></li>
+<li><p>Application utilization in MBs/GBs</p></li>
+</ul>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image19.png"><img alt="https://lh7-us.googleusercontent.com/_ytjweiADIMnFOEeyxI9gnksWA5vAa-Bfl-S21q1ktk0ragxcDnNXjcUMdtsUiUedo1BwNQBg-CXAmE-uJD-dgG8-VvDRMj2Al7osY1YJz7RurSScVtP126jrPgcVY71YRYxIT-SX3fEnPSv6CaGCPw" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image19.png" style="width: 6.5in; height: 3.33333in;" /></a>
+<p>For further information on the detailed bandwidth utilization, session
+count, etc. of the applications, navigate to <strong>Dashboard</strong>
+<a class="reference internal" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image20.png"><img alt="https://lh7-us.googleusercontent.com/9j2tAHRS_6tR6aM3qc5oLxnrflTzvuHUV8xMMdGbwVISoh2QMGji9KhZcXYe9gudDpsD1gZ0FTiiC6frwk9bwKMIi5iyB5CRISza1hj-iANZa8jSvUzlKUzg14GOKJ-_G2a5hrZKWcaUxebYb2mCdI8" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image20.png" style="width: 0.20833in; height: 0.22917in;" /></a>
+from the left navigation sidebar and locate <strong>Applications</strong>. The
+following view will appear on the screen displaying IFA details.</p>
+<a class="reference internal image-reference" href="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image21.png"><img alt="https://lh7-us.googleusercontent.com/wrMSQyOsqcjaFNmd9WswW7XyAs4PVdH6gDxjfaPeBpPwjwNZZj65uyxoN3k_kKxeygVR1qPIvFYjv_EnQbxeDKQzHmMJ_OGTKz8NfHd9ssgBRlBe2_YaNo4Re6c_GUqkpKgNenNROcn3W8MrGO7uC1U" src="vertopal_fdf600e7cffd4b6ebb0c02f4232d8033/media/image21.png" style="width: 6.5in; height: 3.125in;" /></a>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">userguide</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installing python and Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buildproject.html">Creating first project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installingthemes.html">Installing themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Testing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="troubleshooting.html" title="previous chapter">Troubleshooting</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Zoha Khaliq.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/test.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
