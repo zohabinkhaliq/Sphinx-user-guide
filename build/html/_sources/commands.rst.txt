@@ -3,40 +3,50 @@ Sphinx commands
 
 In this section few helpful sphinx commands are listed. 
 
-
 Headings (Different levels)
 +++++++++++++++++++++++++++
 
-``Heading 1
-========``
+.. code::
 
-Heading 2
-++++++++
+    Heading 1
+    =========
 
-Heading 3
----------
+    Heading 2
+    ++++++++
 
-Heading 4
-*********
+    Heading 3
+    ---------
 
-Heading 5
-^^^^^^^^^
+    Heading 4
+    *********
 
-Heading 6
-########
+    Heading 5
+    ^^^^^^^^^
 
-Heading 7
-~~~~~~~~
+    Heading 6
+    ########
+
+    Heading 7
+    ~~~~~~~~
+
 
 .. note::
    The number of symbols below the headings should be equal to the length of the line. 
 .. end-note::
 
+Writing styles
+++++++++++++++
 
-**I am bold** and *I am italics*
+Following are the syntaxes for different styles:
 
-Superscript 
-:sup:`text as subscript`
+- Bold: Use this for bold ``**Content to be bold**``
+- Italics: Use this for italicizing ``*Content to be italicized*``
+- Superscript: Use this for subscripting ``:sup:`Text as subscript'``
+
+Tables 
+++++++
+
+Following are the few syntax to add different type of tables 
 List Tables: (Example)
 
 .. list-table:: Frozen Delights!
