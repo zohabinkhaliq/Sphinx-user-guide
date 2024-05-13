@@ -1,12 +1,12 @@
-Installation Process
-====================
+**Installation Process**
+========================
 
 To get started with sphinx you need to install python and sphinx 
 
-To install Sphinx 
+To install Sphinx on **windows**
 
 1. Go to  `Python Homepage <https://www.python.org/>`_
-2. On the page that appears, select Downloads > All releases. 
+2. On the page that appears, select **Downloads** > **All releases**. 
 3. In the page that opens, locate release version --  and select **Download**
 
 .. note::
@@ -15,9 +15,12 @@ To install Sphinx
    To check if python is successfully installed go to command prompt and check its version;  ``cd --version``
 .. end-note::
       
+To install Sphinx on **mac**
+
+
 Once python is successfully installed, open command prompt and run the following commands:
 
-1. Install sphinx with the following commands: pip3.x install sphinx
-2. To check if installation is successfully completed run the following command: sphinx-build --version 
+1. Install sphinx with the following commands: ``pip3.x install sphinx``
+2. To check if installation is successfully completed run the following command: ``sphinx-build --version`` 
 
 
